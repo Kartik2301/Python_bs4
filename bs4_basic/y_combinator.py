@@ -6,7 +6,7 @@ import numpy as np
 response = requests.get("https://news.ycombinator.com/")
 response.raise_for_status()
 
-data = response.content
+data = response.text
 
 soup = BeautifulSoup(data, "html.parser")
 
